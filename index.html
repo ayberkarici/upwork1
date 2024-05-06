@@ -11,9 +11,16 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/shopar-plugin@0.1.2/dist/shopar-plugin.js"></script>
     <script>
+
+      // Get the sku from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const sku = urlParams.get('sku');
+
+
+
       const shopAR = ShopAR.plugin.setup({
         apiKey: "661e39072fae45e8eebec05d",
-        sku: "Air-Force-1-Low-DM8462-400",
+        sku: sku,
         targetElement: document.getElementById("shopAR"),
       });
 
